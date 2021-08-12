@@ -1,10 +1,11 @@
 @import "config/variables";
+@import "config/mixins";
 
 @font-face{
     font-family: "body-font";
     font-style: normal;
     font-weight: 400;
-    font-display: swap;
+    font-display: fallback;
     src: local("lato-regular"), local("lato"), url("../fonts/Lato-Regular.ttf");
 }
 
@@ -12,7 +13,7 @@
     font-family: "body-font-italic";
     font-style: italic;
     font-weight: 400;
-    font-display: swap;
+    font-display: fallback;
     src: local("lato-italic"), local("Lato-Italic"), url("../fonts/Lato-Regular.ttf");
 }
 
@@ -20,7 +21,7 @@
     font-family: "body-font-bold";
     font-style: bold;
     font-weight: 700;
-    font-display: swap;
+    font-display: fallback;
     src: local("lato-bold"), local("Lato-Bold"), url("../fonts/Lato-Regular.ttf");
 }
 
@@ -28,14 +29,17 @@
     box-sizing: border-box;
 }
 
+:root{
+    --header-margin: 4rem;
+}
+
 body{
     font-family: "body-font", sans-serif;
-    margin: 0;
+    margin: var(--header-margin); 
     padding: 0;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: min-content auto min-content;
-    gap: 1em;
+    grid-template-rows: auto min-content;
 }
 
 .wrapper{
@@ -45,19 +49,40 @@ body{
 }
 
 .header-section{
-    border-bottom: 1px solid map-get($colors, primary-color);
+    position: fixed;
+    top: 0;
+    right: 0;
+    //left: 0;
+    //width: 100%;
+    width: 80vw;
+    height: 100vh;
+    //height: 4rem;
+    //border-bottom: 1px solid map-get($colors, primary-color);
+    background-color: map-get($colors, secondary-color);
 }
 
 .header-container{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    padding: .5em 0;
+    padding: .75em 0;
 }
 
 .header-section img{
     height: 2em;
     max-width: 100%;
+}
+
+.main-menu-toggle{
+    width: 2.2em;
+    height: 1.6em;
+    background: menu-toggle(primary-color);
+    cursor: pointer;
+}
+
+.nav{
+    //display: none;
 }
 
 .menu{
@@ -67,9 +92,12 @@ body{
     list-style: none;
 }
 
+.menu-item{
+    padding: 0.75em 1em;
+}
+
 .menu-link{
     text-decoration: none;
     color: map-get($colors, primary-color);
     display: inline-block;
-    padding: 0.75em 1em;
 }
