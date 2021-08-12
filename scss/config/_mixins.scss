@@ -1,11 +1,15 @@
-@function menu-toggle($color){
-    @if map-has-key($colors, $color){
-        $map-color: map-get($colors, $color);
-        @return linear-gradient($map-color 20%, transparent 20%, transparent 40%, $map-color 40%, $map-color 60%,
-        transparent 60%, transparent 80%, $map-color 80%);
+@mixin media-quarie($breakpoint){
+    @if map-has-key($breakpoints, $breakpoint){
+        @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+            @content;
+        }
+    }
+    @else if type-of($breakpoint) == number unit($breakpoint) == "px"{
+        @media screen and (min-width: $breakpoint){
+            @content;
+        }
     }
     @else{
-        @return linear-gradient($color 20%, transparent 20%, transparent 40%, $color 40%, $color 60%,
-        transparent 60%, transparent 80%, $color 80%);
+        @error "EL VALOR INGRESADO NO CORRESPONDE a un VALOR VALIDO."
     }
 }
