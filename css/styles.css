@@ -1,9 +1,64 @@
 :root {
+  --header-margin: 4rem;
+}
+
+:root {
   --z-back: -10;
   --z-normal: 1;
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "body-font", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  --margin: 1rem;
+  margin: 0 var(--margin);
+  width: calc(100% - calc(var(--margin) * 2));
+  max-width: 1200px;
+}
+
+.wrapper.header {
+  height: 100%;
+}
+
+.wrapper.banner {
+  height: 100%;
+  padding: var(--banner-padding) 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .wrapper {
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.center-block {
+  margin: 0 auto;
+}
+
+.center-content {
+  text-align: center;
 }
 
 .s-5 {
@@ -149,73 +204,6 @@
   }
 }
 
-.center-block {
-  margin: 0 auto;
-}
-
-.center-content {
-  text-align: center;
-}
-
-@font-face {
-  font-family: "body-font";
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: local("lato-regular"), local("lato"), url("../fonts/Lato-Regular.ttf");
-}
-
-@font-face {
-  font-family: "body-font-italic";
-  font-style: italic;
-  font-weight: 400;
-  font-display: fallback;
-  src: local("lato-italic"), local("Lato-Italic"), url("../fonts/Lato-Regular.ttf");
-}
-
-@font-face {
-  font-family: "body-font-bold";
-  font-style: bold;
-  font-weight: 700;
-  font-display: fallback;
-  src: local("lato-bold"), local("Lato-Bold"), url("../fonts/Lato-Regular.ttf");
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-:root {
-  --header-margin: 4rem;
-}
-
-body {
-  font-family: "body-font", sans-serif;
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: var(--header-margin) auto min-content;
-}
-
-.wrapper {
-  --margin: 1rem;
-  margin: 0 var(--margin);
-  width: calc(100% - calc(var(--margin) * 2));
-  max-width: 1200px;
-}
-
-.wrapper.header {
-  height: 100%;
-}
-
-@media screen and (min-width: 1024px) {
-  .wrapper {
-    margin: 0 auto;
-    width: 100%;
-  }
-}
-
 .header-section {
   border-bottom: 1px solid #867979;
 }
@@ -274,12 +262,6 @@ body {
   }
 }
 
-.menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 @media screen and (min-width: 640px) {
   .menu {
     display: flex;
@@ -291,7 +273,6 @@ body {
 }
 
 .menu-link {
-  text-decoration: none;
   color: #867979;
   display: inline-block;
 }
@@ -321,10 +302,34 @@ body {
   height: var(--banner-image-height);
 }
 
-.wrapper.banner {
-  height: 100%;
-  padding: var(--banner-padding) 0;
-  text-align: center;
+@font-face {
+  font-family: "body-font";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("lato-regular"), local("lato"), url("../fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "body-font-italic";
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("lato-italic"), local("Lato-Italic"), url("../fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "body-font-bold";
+  font-style: bold;
+  font-weight: 700;
+  font-display: fallback;
+  src: local("lato-bold"), local("Lato-Bold"), url("../fonts/Lato-Regular.ttf");
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: var(--header-margin) auto min-content;
 }
 
 /*# sourceMappingURL=styles.css.map */

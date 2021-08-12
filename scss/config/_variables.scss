@@ -1,3 +1,4 @@
+// PUNTOS DE QUIEBRE
 $breakpoints:(
     small: 320px,
     medium: 640px,
@@ -5,12 +6,17 @@ $breakpoints:(
     xlarge: 1440px
 );
 
+// PALETA DE COLORES
 $colors:(
     primary-color: hsl(0, 5, 50),
     secondary-color: hsl(0, 0, 0),
     tertiary-color: hsl(215, 100, 60),
     quaternary-color: white
 );
+        
+:root{
+    --header-margin: 4rem;
+}
 
 // VARIABLES DE APILAMIENTO
 :root{

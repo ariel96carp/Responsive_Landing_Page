@@ -1,0 +1,28 @@
+.header-section{
+    border-bottom: 1px solid map-get($colors, primary-color);
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+}
+
+.header-section img{
+    height: 2em;
+    max-width: 100%;
+}
+
+.main-menu-toggle{
+    width: 2.2em;
+    height: 1.6em;
+    background: menu-toggle(primary-color);
+    cursor: pointer;
+
+    @include media-quarie(medium){
+        display: none;
+    }
+}
+

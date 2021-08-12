@@ -1,0 +1,40 @@
+.nav{
+    position: fixed;
+    top: var(--header-margin);
+    right: -80vw;
+    width: 80vw;
+    height: calc(100vh - var(--header-margin));
+    padding-top: 1em;
+    background-color: map-get($colors, secondary-color);
+    transition: right 0.8s;
+    z-index: var(--z-fixed);
+
+    &.show{
+        right: 0;
+    }
+
+    @include media-quarie(medium){
+        position: static;
+        padding-top: 0;
+        background-color: transparent;
+        height: auto;
+        width: auto;
+        transform: translateX(0);
+        transition: none;
+    }
+}
+
+.menu{
+    @include media-quarie(medium){
+        display: flex;
+    }
+}
+
+.menu-item{
+    padding: 0.75em 1em;
+}
+
+.menu-link{
+    color: map-get($colors, primary-color);
+    display: inline-block;
+}

@@ -1,0 +1,22 @@
+.main-banner{
+    --banner-padding: 1em;
+    --banner-image-height: 5em;
+    height: 20em;
+    background: url(../img/banner-edcamp.jpg) map-get($colors, tertiary-color) no-repeat center/cover;
+    background-blend-mode: overlay;
+    color: map-get($colors, quaternary-color);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+
+    @include media-quarie(medium){
+        --banner-image-height: 6em;
+        --banner-padding: 2em;
+    }
+
+    .banner-title{
+        font-family: "body-font-family", sans-serif;
+    }
+
+    .banner-image{
+        height: var(--banner-image-height);
+    }
+}
