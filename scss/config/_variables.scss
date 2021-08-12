@@ -7,7 +7,18 @@ $breakpoints:(
 
 $colors:(
     primary-color: hsl(0, 5, 50),
-    secondary-color: hsl(0, 0, 0)
+    secondary-color: hsl(0, 0, 0),
+    tertiary-color: hsl(215, 100, 60),
+    quaternary-color: white
 );
+
+// VARIABLES DE APILAMIENTO
+:root{
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
 
 $max-width : 1200px;

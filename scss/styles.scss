@@ -1,6 +1,7 @@
 @import "config/variables";
 @import "config/functions";
 @import "config/mixins";
+@import "layout/layouts";
 
 @font-face{
     font-family: "body-font";
@@ -44,9 +45,19 @@ body{
 }
 
 .wrapper{
-    margin: 0 auto;
-    width: 100%;
+    --margin: 1rem;
+    margin: 0 var(--margin);
+    width: calc(100% - calc(var(--margin) * 2));
     max-width: $max-width;
+
+    &.header{
+        height: 100%;
+    }
+
+    @include media-quarie(large){
+        margin: 0 auto;
+        width: 100%;
+    }
 }
 
 .header-section{
@@ -58,7 +69,7 @@ body{
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    padding: .75em 0;
+    height: 100%;
 }
 
 .header-section img{
@@ -80,16 +91,16 @@ body{
 .nav{
     position: fixed;
     top: var(--header-margin);
-    right: 0;
+    right: -80vw;
     width: 80vw;
     height: calc(100vh - var(--header-margin));
     padding-top: 1em;
     background-color: map-get($colors, secondary-color);
-    transform: translateX(150%);
-    transition: transform 1s;
+    transition: right 0.8s;
+    z-index: var(--z-fixed);
 
     &.show{
-        transform : translateX(0);
+        right: 0;
     }
 
     @include media-quarie(medium){
@@ -99,6 +110,7 @@ body{
         height: auto;
         width: auto;
         transform: translateX(0);
+        transition: none;
     }
 }
 
@@ -121,3 +133,33 @@ body{
     color: map-get($colors, primary-color);
     display: inline-block;
 }
+
+.main-banner{
+    --banner-padding: 1em;
+    --banner-image-height: 5em;
+    height: 20em;
+    background: url(../img/banner-edcamp.jpg) map-get($colors, tertiary-color) no-repeat center/cover;
+    background-blend-mode: overlay;
+    color: map-get($colors, quaternary-color);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+
+    @include media-quarie(medium){
+        --banner-image-height: 6em;
+        --banner-padding: 2em;
+    }
+
+    .banner-title{
+        font-family: "body-font-family", sans-serif;
+    }
+
+    .banner-image{
+        height: var(--banner-image-height);
+    }
+}
+
+.wrapper.banner{
+    height: 100%;
+    padding: var(--banner-padding) 0;
+    text-align: center;
+}
+

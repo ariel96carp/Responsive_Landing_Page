@@ -1,0 +1,25 @@
+// ANCHOS PERSONALIZADOS
+
+// ANCHOS PARA PANTALLAS CHICAS
+@for $i from 1 through 20{
+    .s-#{$i * 5}{
+        width: #{$i * 5%};
+    }
+}
+
+// ANCHOS PARA PANTALLAS GRANDES
+@include media-quarie(large){
+    @for $i from 1 through 20{
+        .l-#{$i * 5}{
+            width: #{$i * 5%};
+        }
+    }
+}
+
+.center-block{
+    margin: 0 auto;
+}
+
+.center-content{
+    text-align: center;
+}
