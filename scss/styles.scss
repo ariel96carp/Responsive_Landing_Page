@@ -1,0 +1,75 @@
+@import "config/variables";
+
+@font-face{
+    font-family: "body-font";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("lato-regular"), local("lato"), url("../fonts/Lato-Regular.ttf");
+}
+
+@font-face{
+    font-family: "body-font-italic";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local("lato-italic"), local("Lato-Italic"), url("../fonts/Lato-Regular.ttf");
+}
+
+@font-face{
+    font-family: "body-font-bold";
+    font-style: bold;
+    font-weight: 700;
+    font-display: swap;
+    src: local("lato-bold"), local("Lato-Bold"), url("../fonts/Lato-Regular.ttf");
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "body-font", sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+    gap: 1em;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 100%;
+    max-width: $max-width;
+}
+
+.header-section{
+    border-bottom: 1px solid map-get($colors, primary-color);
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 0;
+}
+
+.header-section img{
+    height: 2em;
+    max-width: 100%;
+}
+
+.menu{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+}
+
+.menu-link{
+    text-decoration: none;
+    color: map-get($colors, primary-color);
+    display: inline-block;
+    padding: 0.75em 1em;
+}

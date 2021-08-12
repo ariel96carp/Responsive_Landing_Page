@@ -1,0 +1,13 @@
+$breakpoints:(
+    small: 320px,
+    medium: 640px,
+    large: 1024px,
+    xlarge: 1440px
+);
+
+$colors:(
+    primary-color: hsl(0, 5, 50),
+    secondary-color: hsl(0, 0, 0)
+);
+
+$max-width : 1200px;
