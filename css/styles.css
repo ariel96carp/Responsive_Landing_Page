@@ -1,3 +1,33 @@
+@font-face {
+  font-family: "body-font";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("lato-regular"), local("lato"), url("/fonts/Lato-Regular.ttf");
+}
+
+@font-face {
+  font-family: "body-font-italic";
+  font-style: italic;
+  font-weight: 400;
+  font-display: fallback;
+  src: local("lato-italic"), local("Lato-Italic"), url("/fonts/Lato-Italic.ttf");
+}
+
+@font-face {
+  font-family: "title-font";
+  font-style: bold;
+  font-weight: 700;
+  font-display: fallback;
+  src: local("lato-bold"), local("Lato-Bold"), url("/fonts/Lato-Bold.ttf");
+}
+
+:root {
+  --body-font: "body-font", sans serif;
+  --body-font-italic: "body-font-italic", sans serif;
+  --title-font: "title-font", sans serif;
+}
+
 :root {
   --header-margin: 4rem;
 }
@@ -15,7 +45,7 @@
 }
 
 body {
-  font-family: "body-font", sans-serif;
+  font-family: var(--body-font);
   margin: 0;
   padding: 0;
 }
@@ -28,6 +58,19 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2 {
+  font-family: var(--title-font);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
 }
 
 .wrapper {
@@ -294,42 +337,64 @@ a {
   }
 }
 
-.main-banner .banner-title {
-  font-family: "body-font-family", sans-serif;
-}
-
 .main-banner .banner-image {
   height: var(--banner-image-height);
+  display: inline;
 }
 
-@font-face {
-  font-family: "body-font";
-  font-style: normal;
-  font-weight: 400;
-  font-display: fallback;
-  src: local("lato-regular"), local("lato"), url("../fonts/Lato-Regular.ttf");
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: #867979;
 }
 
-@font-face {
-  font-family: "body-font-italic";
-  font-style: italic;
-  font-weight: 400;
-  font-display: fallback;
-  src: local("lato-italic"), local("Lato-Italic"), url("../fonts/Lato-Regular.ttf");
+.card {
+  flex: 1 1 320px;
 }
 
-@font-face {
-  font-family: "body-font-bold";
-  font-style: bold;
-  font-weight: 700;
-  font-display: fallback;
-  src: local("lato-bold"), local("Lato-Bold"), url("../fonts/Lato-Regular.ttf");
+.card .card-content {
+  padding: 1em 2em;
+  border: 1px solid #867979;
+}
+
+.card .card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5em;
+  padding-top: 1em;
+  border-top: 1px solid #867979;
+}
+
+.card-footer .footer-description::before {
+  content: url("/img/icon-pin.svg");
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.5em;
+}
+
+button, .button {
+  color: #ff3333;
+  display: inline-block;
+  border: 1px solid #ff3333;
+  padding: 0.5em 0.75em;
+  border-radius: 3px;
+}
+
+button:hover, .button:hover {
+  background-color: #ff3333;
+  color: white;
 }
 
 body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: var(--header-margin) auto min-content;
+}
+
+.events-section {
+  padding: 1em 0 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

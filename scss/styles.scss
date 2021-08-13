@@ -6,30 +6,8 @@
 @import "components/header";
 @import "components/menu";
 @import "components/banner";
-
-@font-face{
-    font-family: "body-font";
-    font-style: normal;
-    font-weight: 400;
-    font-display: fallback;
-    src: local("lato-regular"), local("lato"), url("../fonts/Lato-Regular.ttf");
-}
-
-@font-face{
-    font-family: "body-font-italic";
-    font-style: italic;
-    font-weight: 400;
-    font-display: fallback;
-    src: local("lato-italic"), local("Lato-Italic"), url("../fonts/Lato-Regular.ttf");
-}
-
-@font-face{
-    font-family: "body-font-bold";
-    font-style: bold;
-    font-weight: 700;
-    font-display: fallback;
-    src: local("lato-bold"), local("Lato-Bold"), url("../fonts/Lato-Regular.ttf");
-}
+@import "components/card";
+@import "components/buttons";
 
 body{
     min-height: 100vh;
@@ -37,5 +15,8 @@ body{
     grid-template-rows: var(--header-margin) auto min-content;
 }
 
+.events-section{
+    padding: 1em 0 0;
+}
 
 

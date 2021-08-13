@@ -11,8 +11,40 @@ $colors:(
     primary-color: hsl(0, 5, 50),
     secondary-color: hsl(0, 0, 0),
     tertiary-color: hsl(215, 100, 60),
-    quaternary-color: white
+    quaternary-color: white,
+    color-alert: hsl(0, 100, 60)
 );
+
+// VARIABLES DE FUENTE
+@font-face{
+    font-family: "body-font";
+    font-style: normal;
+    font-weight: 400;
+    font-display: fallback;
+    src: local("lato-regular"), local("lato"), url("/fonts/Lato-Regular.ttf");
+}
+
+@font-face{
+    font-family: "body-font-italic";
+    font-style: italic;
+    font-weight: 400;
+    font-display: fallback;
+    src: local("lato-italic"), local("Lato-Italic"), url("/fonts/Lato-Italic.ttf");
+}
+
+@font-face{
+    font-family: "title-font";
+    font-style: bold;
+    font-weight: 700;
+    font-display: fallback;
+    src: local("lato-bold"), local("Lato-Bold"), url("/fonts/Lato-Bold.ttf");
+}
+
+:root{
+    --body-font: "body-font", sans serif;
+    --body-font-italic: "body-font-italic", sans serif;
+    --title-font: "title-font", sans serif;
+}
         
 :root{
     --header-margin: 4rem;

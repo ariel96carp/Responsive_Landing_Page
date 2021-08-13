@@ -1,0 +1,12 @@
+button,.button{
+    color: map-get($colors, color-alert);
+    display: inline-block;
+    border: 1px solid map-get($colors, color-alert);
+    padding: 0.5em 0.75em;
+    border-radius: 3px;
+
+    &:hover{
+        background-color: map-get($colors, color-alert);
+        color:map-get($colors, quaternary-color) ;
+    }
+}

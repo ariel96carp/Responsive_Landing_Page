@@ -12,11 +12,8 @@
         --banner-padding: 2em;
     }
 
-    .banner-title{
-        font-family: "body-font-family", sans-serif;
-    }
-
     .banner-image{
         height: var(--banner-image-height);
+        display: inline;
     }
 }

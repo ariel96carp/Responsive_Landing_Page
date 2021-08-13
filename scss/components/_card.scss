@@ -1,0 +1,35 @@
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: map-get($colors, primary-color);
+}
+
+.card{
+    flex: 1 1 320px;
+
+    .card-content{
+        padding: 1em 2em;
+        border: 1px solid map-get($colors, primary-color);
+    }
+
+    .card-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: .5em;
+        padding-top: 1em;
+        border-top: 1px solid map-get($colors, primary-color);
+    }
+}
+
+.card-footer{
+    .footer-description{
+        &::before{
+            content: url("/img/icon-pin.svg");
+            display: inline-block;
+            width: 1em;
+            margin-right: 0.5em;
+        }
+    }
+}
