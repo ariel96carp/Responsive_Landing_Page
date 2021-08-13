@@ -2,6 +2,7 @@
     --media-image: 2em;
     --footer-padding: .5em 0;
     background-color: map-get($colors, footer-color);
+    color: map-get($colors, quaternary-color);
     padding: var(--footer-padding);
 
     @include media-quarie(medium){

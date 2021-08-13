@@ -25,5 +25,9 @@ body{
     }
 }
 
+span{
+    color: map-get($colors, tertiary-color);
+}
+
 
 

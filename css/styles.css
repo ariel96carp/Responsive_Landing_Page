@@ -58,7 +58,6 @@ ul {
 
 a {
   text-decoration: none;
-  width: 100%;
 }
 
 img {
@@ -291,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: yellow;
+  background-color: #f2f2f2;
   z-index: var(--z-back);
   transform: skewY(2deg);
 }
@@ -305,6 +304,10 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.item-full {
+  width: 100%;
 }
 
 .header-section {
@@ -450,7 +453,8 @@ button:hover, .button:hover {
 .footer-section {
   --media-image: 2em;
   --footer-padding: .5em 0;
-  background-color: #0080ff;
+  background-color: #4d4d4d;
+  color: white;
   padding: var(--footer-padding);
 }
 
@@ -481,6 +485,10 @@ body {
 
 .final-section p::before {
   background-image: url(/img/Yes_Check_Circle.svg.png);
+}
+
+span {
+  color: #3388ff;
 }
 
 /*# sourceMappingURL=styles.css.map */
