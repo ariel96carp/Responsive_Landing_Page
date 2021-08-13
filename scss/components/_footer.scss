@@ -1,0 +1,19 @@
+.footer-section{
+    --media-image: 2em;
+    --footer-padding: .5em 0;
+    background-color: map-get($colors, footer-color);
+    padding: var(--footer-padding);
+
+    @include media-quarie(medium){
+        --footer-padding: 1em 0;
+    }
+
+    .media-container{
+        display: flex;
+        gap: .5em;
+    }
+
+    img{
+        height: var(--media-image);
+    }
+}

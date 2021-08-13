@@ -14,6 +14,18 @@
         padding: var(--banner-padding) 0;
     }
 
+    &.footer{
+        --fotter-space: space-around;
+        display: flex;
+        align-items: center;
+        justify-content: var(--fotter-space);
+        flex-wrap: wrap;
+
+        @include media-quarie(medium){
+            --fotter-space: space-between;
+        }
+    }
+
     @include media-quarie(large){
         margin: 0 auto;
         width: 100%;
@@ -42,5 +54,49 @@
         .l-#{$i * 5}{
             width: #{$i * 5%};
         }
+    }
+}
+
+// SEPARADOR DE SECCIONES
+.l-section{
+    margin-bottom: 2rem;
+    @include media-quarie(large){
+        margin-bottom: 3rem;
+    }
+}
+
+// DIAGONAL
+.diagonal{
+    position: relative;
+    padding: 1em 0;
+
+    @include media-quarie(large){
+        padding: 2em 0;
+    }
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: map-get($colors, diagonal-color);
+        z-index: var(--z-back);
+        transform: skewY(2deg);
+    }
+}
+
+// PSEUDOELEMENTOS DE TITULOS
+.image{
+    &::before{
+        content: "";
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 }

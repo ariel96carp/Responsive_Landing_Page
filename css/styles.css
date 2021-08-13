@@ -58,6 +58,7 @@ ul {
 
 a {
   text-decoration: none;
+  width: 100%;
 }
 
 img {
@@ -65,7 +66,7 @@ img {
   display: block;
 }
 
-h1, h2 {
+h1, h2, h3, .title {
   font-family: var(--title-font);
 }
 
@@ -87,6 +88,20 @@ h1, h2, h3, h4, h5, h6 {
 .wrapper.banner {
   height: 100%;
   padding: var(--banner-padding) 0;
+}
+
+.wrapper.footer {
+  --fotter-space: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: var(--fotter-space);
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 640px) {
+  .wrapper.footer {
+    --fotter-space: space-between;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -247,6 +262,51 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.l-section {
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .l-section {
+    margin-bottom: 3rem;
+  }
+}
+
+.diagonal {
+  position: relative;
+  padding: 1em 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .diagonal {
+    padding: 2em 0;
+  }
+}
+
+.diagonal::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+  z-index: var(--z-back);
+  transform: skewY(2deg);
+}
+
+.image::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
 .header-section {
   border-bottom: 1px solid #867979;
 }
@@ -346,16 +406,19 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  color: #867979;
 }
 
 .card {
   flex: 1 1 320px;
+  border: 1px solid #867979;
 }
 
 .card .card-content {
   padding: 1em 2em;
-  border: 1px solid #867979;
+}
+
+.card .card-content .card-subtitle {
+  color: #867979;
 }
 
 .card .card-footer {
@@ -368,10 +431,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-footer .footer-description::before {
-  content: url("/img/icon-pin.svg");
-  display: inline-block;
-  width: 1em;
-  margin-right: 0.5em;
+  background-image: url(/img/icon-pin.svg);
 }
 
 button, .button {
@@ -387,14 +447,40 @@ button:hover, .button:hover {
   color: white;
 }
 
+.footer-section {
+  --media-image: 2em;
+  --footer-padding: .5em 0;
+  background-color: #0080ff;
+  padding: var(--footer-padding);
+}
+
+@media screen and (min-width: 640px) {
+  .footer-section {
+    --footer-padding: 1em 0;
+  }
+}
+
+.footer-section .media-container {
+  display: flex;
+  gap: .5em;
+}
+
+.footer-section img {
+  height: var(--media-image);
+}
+
 body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: var(--header-margin) auto min-content;
 }
 
-.events-section {
-  padding: 1em 0 0;
+.final-section {
+  color: #867979;
+}
+
+.final-section p::before {
+  background-image: url(/img/Yes_Check_Circle.svg.png);
 }
 
 /*# sourceMappingURL=styles.css.map */

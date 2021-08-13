@@ -8,6 +8,7 @@
 @import "components/banner";
 @import "components/card";
 @import "components/buttons";
+@import "components/footer";
 
 body{
     min-height: 100vh;
@@ -15,8 +16,14 @@ body{
     grid-template-rows: var(--header-margin) auto min-content;
 }
 
-.events-section{
-    padding: 1em 0 0;
+.final-section{
+    color: map-get($colors, primary-color);
+    p{
+        &::before{
+            background-image: url(/img/Yes_Check_Circle.svg.png);
+        }
+    }
 }
+
 
 

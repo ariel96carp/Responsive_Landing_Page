@@ -2,15 +2,18 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    color: map-get($colors, primary-color);
 }
 
 .card{
     flex: 1 1 320px;
+    border: 1px solid map-get($colors, primary-color);
 
     .card-content{
         padding: 1em 2em;
-        border: 1px solid map-get($colors, primary-color);
+
+        .card-subtitle{
+            color: map-get($colors, primary-color);
+        }
     }
 
     .card-footer{
@@ -26,10 +29,7 @@
 .card-footer{
     .footer-description{
         &::before{
-            content: url("/img/icon-pin.svg");
-            display: inline-block;
-            width: 1em;
-            margin-right: 0.5em;
+            background-image: url(/img/icon-pin.svg);
         }
     }
 }
