@@ -20,6 +20,7 @@
         align-items: center;
         justify-content: var(--fotter-space);
         flex-wrap: wrap;
+        column-gap: .5em;
 
         @include media-quarie(medium){
             --fotter-space: space-between;
