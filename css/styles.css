@@ -7,14 +7,6 @@
 }
 
 @font-face {
-  font-family: "body-font-italic";
-  font-style: italic;
-  font-weight: 400;
-  font-display: fallback;
-  src: local("lato-italic"), local("Lato-Italic"), url("/fonts/Lato-Italic.ttf");
-}
-
-@font-face {
   font-family: "title-font";
   font-style: bold;
   font-weight: 700;
@@ -360,8 +352,8 @@ h1, h2, h3, h4, h5, h6 {
   top: var(--header-margin);
   right: -80vw;
   width: 80vw;
-  height: calc(100vh - var(--header-margin));
   padding-top: 1em;
+  height: calc(100vh - var(--header-margin));
   background-color: black;
   transition: right 0.8s;
   z-index: var(--z-fixed);
@@ -391,6 +383,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .menu-item {
   padding: 0.75em 1em;
+}
+
+@media screen and (max-width: 40rem) {
+  .menu-item.menu-hover:hover {
+    background-color: white;
+  }
 }
 
 .menu-link {
