@@ -9,3 +9,21 @@
         transparent 60%, transparent 80%, $color 80%);
     }
 }
+
+@function px-to-rem ($value, $base: 16px){
+    @if type-of($value) == number and unit($value) == "px"{
+        @return $value / $base * 1rem;
+    }
+}
+
+@function breakpoint-finder($breakpoint){
+    @if map-has-key($breakpoints, $breakpoint){
+        @return px-to-rem(map-get($breakpoints, $breakpoint));
+    }
+    @else if type-of($breakpoint) == number and unit($breakpoint) == "px"{
+        @return px-to-rem($breakpoint);
+    }
+    @else{
+        @return null;
+    }
+}

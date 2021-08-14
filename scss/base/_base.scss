@@ -6,6 +6,7 @@ body{
     font-family: var(--body-font);
     margin: 0; 
     padding: 0;
+    @include fluid-typography(small, large, px-to-rem(12px), px-to-rem(16px));
 }
 
 ul{
