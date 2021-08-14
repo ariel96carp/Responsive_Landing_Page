@@ -40,19 +40,6 @@ body {
   font-family: var(--body-font);
   margin: 0;
   padding: 0;
-  font-size: 0.75rem;
-}
-
-@media screen and (min-width: 20rem) {
-  body {
-    font-size: calc(0.75rem + 8 * (100vw - 20rem) / 960);
-  }
-}
-
-@media screen and (min-width: 64rem) {
-  body {
-    font-size: 1rem;
-  }
 }
 
 ul {
