@@ -507,7 +507,12 @@ button, .button {
   border-radius: 3px;
 }
 
-button:hover, .button:hover {
+button.button-hover:hover, .button.button-hover:hover {
+  background-color: #ff3333;
+  color: white;
+}
+
+button.button-active:active, .button.button-active:active {
   background-color: #ff3333;
   color: white;
 }
