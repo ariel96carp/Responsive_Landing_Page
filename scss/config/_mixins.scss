@@ -15,7 +15,15 @@
 };
 
 @mixin fluid-typography($min-width, $max-width, $min-font, $max-font){
-    font-size: 16px;
+    font-size: #{$min-font};
+
+    @include media-quarie($min-width){
+        font-size: calc(#{$min-font} + 0.5 * ((100vw - #{breakpoint-finder($min-width)}) / 60))
+    }
+
+    @include media-quarie($max-width){
+        font-size: #{$max-font};
+    }
 };
 
    

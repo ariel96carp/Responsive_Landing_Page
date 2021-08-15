@@ -40,6 +40,19 @@ body {
   font-family: var(--body-font);
   margin: 0;
   padding: 0;
+  font-size: 0.75rem;
+}
+
+@media screen and (min-width: 20rem) {
+  body {
+    font-size: calc(0.75rem + 0.5 * ((100vw - 20rem) / 60));
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  body {
+    font-size: 1rem;
+  }
 }
 
 ul {
@@ -112,84 +125,130 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-.s-5 {
-  width: 5%;
+@media screen and (min-width: 20rem) {
+  .s-5 {
+    width: 5%;
+  }
+  .s-10 {
+    width: 10%;
+  }
+  .s-15 {
+    width: 15%;
+  }
+  .s-20 {
+    width: 20%;
+  }
+  .s-25 {
+    width: 25%;
+  }
+  .s-30 {
+    width: 30%;
+  }
+  .s-35 {
+    width: 35%;
+  }
+  .s-40 {
+    width: 40%;
+  }
+  .s-45 {
+    width: 45%;
+  }
+  .s-50 {
+    width: 50%;
+  }
+  .s-55 {
+    width: 55%;
+  }
+  .s-60 {
+    width: 60%;
+  }
+  .s-65 {
+    width: 65%;
+  }
+  .s-70 {
+    width: 70%;
+  }
+  .s-75 {
+    width: 75%;
+  }
+  .s-80 {
+    width: 80%;
+  }
+  .s-85 {
+    width: 85%;
+  }
+  .s-90 {
+    width: 90%;
+  }
+  .s-95 {
+    width: 95%;
+  }
+  .s-100 {
+    width: 100%;
+  }
 }
 
-.s-10 {
-  width: 10%;
-}
-
-.s-15 {
-  width: 15%;
-}
-
-.s-20 {
-  width: 20%;
-}
-
-.s-25 {
-  width: 25%;
-}
-
-.s-30 {
-  width: 30%;
-}
-
-.s-35 {
-  width: 35%;
-}
-
-.s-40 {
-  width: 40%;
-}
-
-.s-45 {
-  width: 45%;
-}
-
-.s-50 {
-  width: 50%;
-}
-
-.s-55 {
-  width: 55%;
-}
-
-.s-60 {
-  width: 60%;
-}
-
-.s-65 {
-  width: 65%;
-}
-
-.s-70 {
-  width: 70%;
-}
-
-.s-75 {
-  width: 75%;
-}
-
-.s-80 {
-  width: 80%;
-}
-
-.s-85 {
-  width: 85%;
-}
-
-.s-90 {
-  width: 90%;
-}
-
-.s-95 {
-  width: 95%;
-}
-
-.s-100 {
-  width: 100%;
+@media screen and (min-width: 40rem) {
+  .m-5 {
+    width: 5%;
+  }
+  .m-10 {
+    width: 10%;
+  }
+  .m-15 {
+    width: 15%;
+  }
+  .m-20 {
+    width: 20%;
+  }
+  .m-25 {
+    width: 25%;
+  }
+  .m-30 {
+    width: 30%;
+  }
+  .m-35 {
+    width: 35%;
+  }
+  .m-40 {
+    width: 40%;
+  }
+  .m-45 {
+    width: 45%;
+  }
+  .m-50 {
+    width: 50%;
+  }
+  .m-55 {
+    width: 55%;
+  }
+  .m-60 {
+    width: 60%;
+  }
+  .m-65 {
+    width: 65%;
+  }
+  .m-70 {
+    width: 70%;
+  }
+  .m-75 {
+    width: 75%;
+  }
+  .m-80 {
+    width: 80%;
+  }
+  .m-85 {
+    width: 85%;
+  }
+  .m-90 {
+    width: 90%;
+  }
+  .m-95 {
+    width: 95%;
+  }
+  .m-100 {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 64rem) {
@@ -372,8 +431,11 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.75em 1em;
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 640px) {
   .menu-item.menu-hover:hover {
+    background-color: white;
+  }
+  .menu-item.menu-active:active {
     background-color: white;
   }
 }

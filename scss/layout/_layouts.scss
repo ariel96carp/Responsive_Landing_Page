@@ -43,10 +43,22 @@
 }
 
 // ANCHOS PERSONALIZADOS
+
 // ANCHOS PARA PANTALLAS CHICAS
-@for $i from 1 through 20{
-    .s-#{$i * 5}{
-        width: #{$i * 5%};
+@include media-quarie(small){
+    @for $i from 1 through 20{
+        .s-#{$i * 5}{
+            width: #{$i * 5%};
+        }
+    }
+}
+
+// ANCHOS PARA PANTALLAS MEDIANAS
+@include media-quarie(medium){
+    @for $i from 1 through 20{
+        .m-#{$i * 5}{
+            width: #{$i * 5%};
+        }
     }
 }
 
