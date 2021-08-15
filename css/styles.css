@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: fallback;
-  src: local("lato-regular"), local("lato"), url("/fonts/Lato-Regular.ttf");
+  src: local("lato-regular"), local("lato"), url("../fonts/Lato-Regular.ttf");
 }
 
 @font-face {
@@ -11,7 +11,7 @@
   font-style: bold;
   font-weight: 700;
   font-display: fallback;
-  src: local("lato-bold"), local("Lato-Bold"), url("/fonts/Lato-Bold.ttf");
+  src: local("lato-bold"), local("Lato-Bold"), url("../fonts/Lato-Bold.ttf");
 }
 
 :root {
@@ -496,7 +496,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-footer .footer-description::before {
-  background-image: url(/img/icon-pin.svg);
+  background-image: url(../img/icon-pin.svg);
 }
 
 button, .button {
@@ -546,7 +546,7 @@ body {
 }
 
 .final-section p::before {
-  background-image: url(/img/Yes_Check_Circle.svg.png);
+  background-image: url(../img/Yes_Check_Circle.svg.png);
 }
 
 span {

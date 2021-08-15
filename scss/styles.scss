@@ -20,7 +20,7 @@ body{
     color: map-get($colors, primary-color);
     p{
         &::before{
-            background-image: url(/img/Yes_Check_Circle.svg.png);
+            background-image: url(../img/Yes_Check_Circle.svg.png);
         }
     }
 }

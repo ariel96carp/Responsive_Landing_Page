@@ -23,7 +23,7 @@ $colors:(
     font-style: normal;
     font-weight: 400;
     font-display: fallback;
-    src: local("lato-regular"), local("lato"), url("/fonts/Lato-Regular.ttf");
+    src: local("lato-regular"), local("lato"), url("../fonts/Lato-Regular.ttf");
 }
 
 @font-face{
@@ -31,7 +31,7 @@ $colors:(
     font-style: bold;
     font-weight: 700;
     font-display: fallback;
-    src: local("lato-bold"), local("Lato-Bold"), url("/fonts/Lato-Bold.ttf");
+    src: local("lato-bold"), local("Lato-Bold"), url("../fonts/Lato-Bold.ttf");
 }
 
 :root{
