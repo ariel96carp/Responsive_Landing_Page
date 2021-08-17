@@ -14,6 +14,9 @@
     @if type-of($value) == number and unit($value) == "px"{
         @return $value / $base * 1rem;
     }
+    @else{
+        @return null;
+    }
 }
 
 @function breakpoint-finder($breakpoint){
@@ -24,6 +27,16 @@
         @return px-to-rem($breakpoint);
     }
     @else{
+        @return null;
+    }
+}
+
+@function strip-unit($number) {
+    @if type-of($number) == number and not unitless($number) {
+        @return $number / ($number * 0 + 1);
+    }
+    @else
+    {
         @return null;
     }
 }

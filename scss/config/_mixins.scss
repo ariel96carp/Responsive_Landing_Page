@@ -18,7 +18,7 @@
     font-size: #{$min-font};
 
     @include media-quarie($min-width){
-        font-size: calc(#{$min-font} + 0.5 * ((100vw - #{breakpoint-finder($min-width)}) / 60))
+        font-size: calc(#{$min-font} + (#{strip-unit($max-font - $min-font)}) * ((100vw - #{breakpoint-finder($min-width)}) / 60))
     }
 
     @include media-quarie($max-width){
