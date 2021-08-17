@@ -44,7 +44,7 @@ body {
 
 @media screen and (min-width: 20rem) {
   body {
-    font-size: calc(0.75rem + 0.5 * ((100vw - 20rem) / 60));
+    font-size: calc(0.75rem + (0.25) * ((100vw - 20rem) / 60));
   }
 }
 
